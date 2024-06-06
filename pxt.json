@@ -1,5 +1,5 @@
 {
-    "name": "extension publisher thing idk",
+    "name": "microbit array sending",
     "description": "",
     "dependencies": {
         "core": "*",
