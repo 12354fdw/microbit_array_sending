@@ -7,7 +7,7 @@ namespace radio {
     //% blockId=SendArray block="send array %array"
     //% array.shadow="lists_create_with"
     //% help=googie/sendArray
-    //% group="send"
+    //% group="Send"
     export function sendArray(array: string[]): void {
         let serializedArray = array.join(DELIMITER);
         radio.sendString(serializedArray);
@@ -19,7 +19,7 @@ namespace radio {
      */
     //% blockId=OnReceivedArray block="on received array"
     //% help=googie/onReceivedArray
-    //% group="receive"
+    //% group="Receive"
     export function onReceivedArray(handler: (array: string[]) => void): void {
         radio.onReceivedString(function (receivedString: string) {
             let receivedArray = receivedString.split(DELIMITER);
