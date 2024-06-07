@@ -9,8 +9,8 @@ namespace radio {
     //% help=googie/sendArray
     //% group="Send"
     export function sendArray(array: string[]): void {
-        let serializedArray = array.join(DELIMITER);
-        radio.sendString(serializedArray);
+        let sa = array.join(DELIMITER);
+        radio.sendString(sa);
     }
 
     /**
@@ -21,9 +21,9 @@ namespace radio {
     //% help=googie/onReceivedArray
     //% group="Receive"
     export function onReceivedArray(handler: (array: string[]) => void): void {
-        radio.onReceivedString(function (receivedString: string) {
-            let receivedArray = receivedString.split(DELIMITER);
-            handler(receivedArray);
+        radio.onReceivedString(function (r: string) {
+            let ra = r.split(DELIMITER);
+            handler(ra);
         });
     }
 }
