@@ -17,10 +17,10 @@ namespace radio {
      * Registers an event handler for receiving an array.
      * @param handler The handler to run when an array is received
      */
-    //% blockId=OnReceivedArray block="on received array"
+    //% blockId=OnReceivedArray block="on received"
     //% help=googie/onReceivedArray
     //% group="Receive"
-    export function onReceivedArray(handler: (array: string[]) => void): void {
+    export function onReceivedArray(handler: (list: string[]) => void): void {
         radio.onReceivedString(function (r: string) {
             let ra = r.split(DELIMITER);
             handler(ra);
